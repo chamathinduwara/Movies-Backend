@@ -16,7 +16,7 @@ public class MovieService {
         return moiveRepository.findAll();
     }
 
-    public Optional<Movie> singleMovie(ObjectId id) {
-        return moiveRepository.findById(id);
+    public Optional<Movie> singleMovie(String imdbId) {
+        return moiveRepository.findMovieByImdbId(imdbId);
     }
 }
